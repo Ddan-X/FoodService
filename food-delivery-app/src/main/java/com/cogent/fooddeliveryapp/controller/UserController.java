@@ -85,7 +85,7 @@ public class UserController {
 
 		user.setAddresses(addresses);
 		user.setEmail(signupRequest.getEmail());
-		user.setName(signupRequest.getName());
+		user.setUsername(signupRequest.getName());
 		user.setPassword(signupRequest.getPassword());
 		user.setRoles(roles);
 		user.setDoj(signupRequest.getDoj());
@@ -184,7 +184,7 @@ public class UserController {
 				if(userService.existsByUserId(id)) {
 					User u = userService.getUserById(id).get();
 					u.setEmail(user.getEmail());
-					u.setName(user.getName());
+					u.setUsername(user.getUsername());
 					User u2 = userService.addUser(u);
 					return ResponseEntity.status(200).body(u2);
 				}else {

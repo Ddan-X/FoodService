@@ -50,7 +50,7 @@ public class User {
 	private long userId;
 	
 	@NotBlank
-	private String name;
+	private String username;
 	
 	@Email
 	private String email;

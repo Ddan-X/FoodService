@@ -13,7 +13,7 @@ public class Builder {
 	public UserResponse buildUserResponse(User user) {
 		UserResponse userResponse = new UserResponse();
 		userResponse.setEmail(user.getEmail());
-		userResponse.setName(user.getName());
+		userResponse.setName(user.getUsername());
 		userResponse.setDoj(user.getDoj());
 		Set<String> roles = new HashSet<>();
 		user.getRoles().forEach(e2->{
